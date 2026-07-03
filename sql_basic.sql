@@ -9,3 +9,8 @@ FROM players;
 SELECT *
 FROM countries
 WHERE group_name = 'C';
+
+-- 問3
+SELECT *
+FROM countries
+WHERE group_name <> 'C';
