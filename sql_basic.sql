@@ -19,3 +19,8 @@ WHERE group_name <> 'C';
 SELECT *
 FROM players
 WHERE EXTRACT(YEAR FROM AGE(CURRENT_DATE, birth)) >= 40;
+
+-- 問5
+SELECT *
+FROM players
+WHERE height < 170;
