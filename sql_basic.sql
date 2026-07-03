@@ -24,3 +24,8 @@ WHERE EXTRACT(YEAR FROM AGE(CURRENT_DATE, birth)) >= 40;
 SELECT *
 FROM players
 WHERE height < 170;
+
+-- 問6
+SELECT *
+FROM countries
+WHERE ranking BETWEEN 36 AND 56;
