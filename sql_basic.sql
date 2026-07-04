@@ -29,3 +29,8 @@ WHERE height < 170;
 SELECT *
 FROM countries
 WHERE ranking BETWEEN 36 AND 56;
+
+-- 問7
+SELECT *
+FROM players
+WHERE position IN ('GK', 'DF', 'MF');
