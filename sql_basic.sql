@@ -34,3 +34,8 @@ WHERE ranking BETWEEN 36 AND 56;
 SELECT *
 FROM players
 WHERE position IN ('GK', 'DF', 'MF');
+
+-- 問8
+SELECT *
+FROM goals
+WHERE player_id IS NULL;
