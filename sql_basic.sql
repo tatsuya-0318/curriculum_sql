@@ -39,3 +39,8 @@ WHERE position IN ('GK', 'DF', 'MF');
 SELECT *
 FROM goals
 WHERE player_id IS NULL;
+
+-- 問9
+SELECT *
+FROM goals
+WHERE player_id IS NOT NULL;
