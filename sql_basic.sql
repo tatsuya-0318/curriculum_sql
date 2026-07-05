@@ -54,3 +54,9 @@ WHERE name LIKE '%ニョ';
 SELECT *
 FROM players
 WHERE name LIKE '%ニョ%';
+
+-- 問12
+SELECT *
+FROM players
+WHERE height < 165
+OR weight < 60;
