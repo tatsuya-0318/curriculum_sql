@@ -49,3 +49,8 @@ WHERE player_id IS NOT NULL;
 SELECT *
 FROM players
 WHERE name LIKE '%ニョ';
+
+-- 問11
+SELECT *
+FROM players
+WHERE name LIKE '%ニョ%';
