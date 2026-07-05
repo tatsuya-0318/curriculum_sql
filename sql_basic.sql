@@ -44,3 +44,8 @@ WHERE player_id IS NULL;
 SELECT *
 FROM goals
 WHERE player_id IS NOT NULL;
+
+-- 問10
+SELECT *
+FROM players
+WHERE name LIKE '%ニョ';
