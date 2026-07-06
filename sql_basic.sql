@@ -77,3 +77,8 @@ SELECT
     club,
     height + weight AS "体力指数"
 FROM players;
+
+-- 問16
+SELECT *
+FROM players
+ORDER BY height DESC, weight DESC;
