@@ -167,3 +167,20 @@ SELECT
 FROM goals
 WHERE player_id IS NOT NULL;
 
+-- 問27
+SELECT
+    players.position,
+    players.name,
+    players.club,
+    players.height
+FROM players
+INNER JOIN (
+    SELECT
+        position,
+        MAX(height) AS max_height
+    FROM players
+    GROUP BY position
+) AS max_players
+ON players.position = max_players.position
+AND players.height = max_players.max_height;
+
