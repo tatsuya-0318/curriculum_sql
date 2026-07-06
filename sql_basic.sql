@@ -222,3 +222,12 @@ WHERE weight > 95
 
 ORDER BY id;
 
+-- 問31
+SELECT
+    name,
+    height,
+    weight
+FROM players
+ORDER BY height DESC, name ASC
+LIMIT 15 OFFSET 5;
+
