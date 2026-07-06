@@ -209,3 +209,16 @@ SELECT
 FROM players
 WHERE CAST(birth AS TEXT) LIKE '1981%';
 
+-- 問30
+SELECT *
+FROM players
+WHERE height > 195
+
+UNION ALL
+
+SELECT *
+FROM players
+WHERE weight > 95
+
+ORDER BY id;
+
