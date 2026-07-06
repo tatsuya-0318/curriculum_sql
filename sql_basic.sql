@@ -60,3 +60,9 @@ SELECT *
 FROM players
 WHERE height < 165
 OR weight < 60;
+
+-- 問13
+SELECT *
+FROM players
+WHERE (position = 'FW' OR position = 'MF')
+AND height < 170;
