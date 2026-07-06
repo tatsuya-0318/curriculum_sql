@@ -118,3 +118,15 @@ SELECT
 FROM countries
 WHERE group_name = 'C';
 
+-- 問22
+SELECT
+    countries.name,
+    players.name,
+    goals.goal_time
+FROM goals
+INNER JOIN players
+    ON goals.player_id = players.id
+INNER JOIN countries
+    ON players.country_id = countries.id;
+
+    
