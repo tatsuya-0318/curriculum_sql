@@ -105,3 +105,9 @@ SELECT
     COUNT(*) AS "ゴール数"
 FROM goals
 WHERE player_id BETWEEN 714 AND 736;
+
+-- 問20
+SELECT
+    MAX(height) AS "最も高い身長",
+    MIN(weight) AS "最も軽い体重"
+FROM players;
