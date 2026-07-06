@@ -111,3 +111,10 @@ SELECT
     MAX(height) AS "最も高い身長",
     MIN(weight) AS "最も軽い体重"
 FROM players;
+
+-- 問21
+SELECT
+    SUM(ranking) AS "FIFAランク合計"
+FROM countries
+WHERE group_name = 'C';
+
