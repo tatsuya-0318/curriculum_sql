@@ -70,3 +70,10 @@ AND height < 170;
 -- 問14
 SELECT DISTINCT position
 FROM players;
+
+-- 問15
+SELECT
+    name,
+    club,
+    height + weight AS "体力指数"
+FROM players;
