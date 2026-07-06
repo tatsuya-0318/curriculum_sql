@@ -137,3 +137,10 @@ FROM goals
 LEFT JOIN players
 ON goals.player_id = players.id;
 
+-- 問24
+SELECT
+    goals.goal_time,
+    players.name
+FROM players
+RIGHT JOIN goals
+ON players.id = goals.player_id;
