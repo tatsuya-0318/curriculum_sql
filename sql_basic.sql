@@ -82,3 +82,14 @@ FROM players;
 SELECT *
 FROM players
 ORDER BY height DESC, weight DESC;
+
+-- 問17
+SELECT
+    id,
+    pairing_id,
+    CASE
+        WHEN player_id IS NULL THEN 9999
+        ELSE player_id
+    END AS player_id,
+    goal_time
+FROM goals;
