@@ -144,3 +144,15 @@ SELECT
 FROM players
 RIGHT JOIN goals
 ON players.id = goals.player_id;
+
+-- 問25
+SELECT
+    goals.goal_time,
+    players.name,
+    countries.name
+FROM goals
+LEFT JOIN players
+ON goals.player_id = players.id
+LEFT JOIN countries
+ON players.country_id = countries.id;
+
