@@ -129,4 +129,11 @@ INNER JOIN players
 INNER JOIN countries
     ON players.country_id = countries.id;
 
-    
+-- 問23
+SELECT
+    goals.goal_time,
+    players.name
+FROM goals
+LEFT JOIN players
+ON goals.player_id = players.id;
+
