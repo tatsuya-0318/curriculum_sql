@@ -194,3 +194,18 @@ FROM countries
 GROUP BY group_name
 HAVING MAX(ranking) - MIN(ranking) > 50;
 
+-- 問29
+SELECT
+    '1980年生まれ' AS "生まれ年",
+    COUNT(*) AS "人数"
+FROM players
+WHERE CAST(birth AS TEXT) LIKE '1980%'
+
+UNION
+
+SELECT
+    '1981年生まれ' AS "生まれ年",
+    COUNT(*) AS "人数"
+FROM players
+WHERE CAST(birth AS TEXT) LIKE '1981%';
+
