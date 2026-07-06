@@ -156,3 +156,14 @@ ON goals.player_id = players.id
 LEFT JOIN countries
 ON players.country_id = countries.id;
 
+-- 問26
+SELECT
+    goal_time,
+    (
+        SELECT name
+        FROM players
+        WHERE players.id = goals.player_id
+    ) AS name
+FROM goals
+WHERE player_id IS NOT NULL;
+
