@@ -257,4 +257,24 @@ ORDER BY
     pairings.kickoff,
     my_countries.ranking;
 
-    
+    -- 問33
+SELECT
+    pairings.kickoff,
+    my_countries.name AS "自国名",
+    enemy_countries.name AS "対戦相手国名",
+    my_countries.ranking AS "自国FIFAランク",
+    enemy_countries.ranking AS "対戦相手国FIFAランク",
+    (
+        SELECT COUNT(*)
+        FROM goals
+        WHERE goals.pairing_id = pairings.id
+    ) AS "自国のゴール数"
+FROM pairings
+INNER JOIN countries AS my_countries
+ON pairings.my_country_id = my_countries.id
+INNER JOIN countries AS enemy_countries
+ON pairings.enemy_country_id = enemy_countries.id
+WHERE my_countries.group_name = 'C'
+ORDER BY
+    pairings.kickoff,
+    my_countries.ranking;
