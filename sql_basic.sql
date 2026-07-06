@@ -184,3 +184,13 @@ INNER JOIN (
 ON players.position = max_players.position
 AND players.height = max_players.max_height;
 
+-- 問28
+SELECT
+    group_name,
+    MIN(ranking) AS "最上位",
+    MAX(ranking) AS "最下位",
+    MAX(ranking) - MIN(ranking) AS "差"
+FROM countries
+GROUP BY group_name
+HAVING MAX(ranking) - MIN(ranking) > 50;
+
