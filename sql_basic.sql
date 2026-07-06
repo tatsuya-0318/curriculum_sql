@@ -66,3 +66,7 @@ SELECT *
 FROM players
 WHERE (position = 'FW' OR position = 'MF')
 AND height < 170;
+
+-- 問14
+SELECT DISTINCT position
+FROM players;
